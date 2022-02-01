@@ -6,6 +6,8 @@ User : ale3x59
 
 import java.util.Scanner;
 
+import javax.lang.model.util.ElementScanner6;
+
 public class atm {
 
   private String act_num;
@@ -35,6 +37,9 @@ public class atm {
   void show_act() {
       System.out.println(name+" $"+balance);
   }
+  void login(){
+
+  }
 
   //deposit money 
   void deposit(int amount){
@@ -55,10 +60,17 @@ public class atm {
   }
   //starting Menu
   void menu(){
-      System.out.println("Welcome\n Please Choose an Option Below:\n 1: Create an Account\n 2. Login\n\n(choose number and click enter)");
+      System.out.println("Welcome\n Please Choose an Option Below:\n 1: Create an Account\n 2. Login\n3.Cancel\n\n(choose number and click enter)");
       option=in.nextInt();
-      
-
+      if (option==1){
+          create_act();
+      }
+      else if (option==2){
+          login();
+      }
+      else
+         System.out.println("Option Not Avaiable");
+         
   }
 
 
